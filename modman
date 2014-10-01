@@ -1,1 +1,4 @@
+#app
+app/code/community/Vmasciotta/OrderPrint                    app/code/community/Vmasciotta/OrderPrint
 
+app/etc/modules/Vmasciotta_OrderPrint.xml                   app/etc/modules/Vmasciotta_OrderPrint.xml

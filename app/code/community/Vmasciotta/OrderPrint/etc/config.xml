@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Vmasciotta_OrderPrint>
+            <version>1.0.0</version>
+        </Vmasciotta_OrderPrint>
+    </modules>
+    <global>
+        <models>
+            <vmasciotta_orderprint>
+                <class>Vmasciotta_OrderPrint_Model</class>
+            </vmasciotta_orderprint>
+        </models>
+
+        <helpers>
+            <vmasciotta_orderprint>
+                <class>Vmasciotta_OrderPrint_Helper</class>
+            </vmasciotta_orderprint>
+        </helpers>
+
+        <pdf>
+            <order>
+                <default>vmasciotta_orderprint/sales_order_pdf_items_order_default</default>
+                <grouped>vmasciotta_orderprint/sales_order_pdf_items_order_grouped</grouped>
+            </order>
+        </pdf>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <vmasciotta_orderprint after="Mage_Adminhtml">Vmasciotta_OrderPrint_Adminhtml</vmasciotta_orderprint>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <events>
+            <adminhtml_widget_container_html_before>
+                <observers>
+                    <vmasciotta_orderprint>
+                        <class>vmasciotta_orderprint/observer</class>
+                        <type>singletone</type>
+                        <method>adminhtmlWidgetContainerHtmlBefore</method>
+                    </vmasciotta_orderprint>
+                </observers>
+            </adminhtml_widget_container_html_before>
+        </events>
+    </adminhtml>
+</config>
