@@ -3,7 +3,7 @@
     "type": "magento-module",
     "license": "MIT",
     "homepage": "http://github.com/vmasciotta/MagentoOrderPrint",
-    "description": "Semplice modulo che la possibilità di stampare un ordine",
+    "description": "Semplice modulo che aggiunge la possibilità di stampare un ordine",
     "authors": [
         {
             "name": "Valerio Masciotta",
