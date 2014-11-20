@@ -8,6 +8,7 @@ class Vmasciotta_OrderPrint_Model_Sales_Order_Pdf_Items_Order_Default extends Vm
     public function draw()
     {
         $order  = $this->getOrder();
+        /** @var Mage_Sales_Model_Order_Item $item */
         $item   = $this->getItem();
         $pdf    = $this->getPdf();
         $page   = $this->getPage();
@@ -28,7 +29,7 @@ class Vmasciotta_OrderPrint_Model_Sales_Order_Pdf_Items_Order_Default extends Vm
 
         // draw QTY
         $lines[0][] = array(
-            'text'  => $item->getQty() * 1,
+            'text'  => $item->getQtyOrdered() * 1,
             'feed'  => 435,
             'align' => 'right'
         );

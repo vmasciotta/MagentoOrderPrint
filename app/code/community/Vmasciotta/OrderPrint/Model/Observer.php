@@ -1,6 +1,7 @@
 <?php
 
-class Vmasciotta_OrderPrint_Model_Observer{
+class Vmasciotta_OrderPrint_Model_Observer
+{
     public function adminhtmlWidgetContainerHtmlBefore($event)
     {
         $block = $event->getBlock();
